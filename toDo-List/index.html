@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+     <meta charset="utf-8">
+     <title>larazoon - ToDoList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- bootstrap styles -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+
+      <!-- customize bootstrap styles -->
+      <link rel="stylesheet" href="root.css">
+
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <div class="container mt-3 mb-5">
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      toDo-List مقدمة من موقع <a href="https://www.larazoon.com" class="fw-bolder">larazoon.com</a>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="bg-light shadow-sm rounded-4 p-4 my-3 mx-2 border border-info border-secondary">
+      <div class="input-group mb-3">
+        <textarea class="form-control border-bottom border-info bg-light" placeholder="أدخل المهام" id="inputToDo" aria-label="Recipient's username" aria-describedby="addToDoBtn"></textarea>
+        
+      <button type="button" class="btn btn-primary" id="addToDoBtn">إضافة</button>
+      </div>
+      <div>
+      <label class="form-label d-block fw-bolder py-3">مدى أهمية ال toDo</label>
+
+      <input type="radio" class="btn-check" name="importantable" value="danger" id="danger-outlined" autocomplete="off" checked>
+      <label class="btn btn-outline-danger" for="danger-outlined">جداً</label>
+
+      <input type="radio" class="btn-check" name="importantable" value="warning" id="warning-outlined" autocomplete="off">
+      <label class="btn btn-outline-warning" for="warning-outlined">مهم</label>
+
+      <input type="radio" class="btn-check" name="importantable" value="success" id="success-outlined" autocomplete="off" >
+      <label class="btn btn-outline-success" for="success-outlined">عادي</label>
+
+      <input type="radio" class="btn-check" name="importantable" value="info" id="info-outlined" autocomplete="off">
+      <label class="btn btn-outline-info" for="info-outlined">أقل</label>
+ 
+      </div>
+    </div>
+
+      <h4 class="border-bottom pb-2 m-2 mt-5">جميع ToDos الخاصة بك</h4>
+      <div id="noToDoAlret" class="alert alert-dark my-3" role="alert">لم تقوم بإضافة اي toDo بعد !</div>
+      <div class="toDo-container">
+        
+      </div>
+    </div>
+    <div class="btn btn-light shadow-sm">
+      لديك <span id="allToDosCount" class="badge text-bg-secondary"></span> toDos
+    </div>
+    <div class="btn btn-light shadow-sm">
+      أتممت <span id="allComplatedToDosCount" class="badge text-bg-secondary"></span>
+    </div>
+  </div>
+    
+
+ 
+    <!-- Complate Modal -->
+    <div class="modal fade" id="complatedToDoModel" tabindex="-1" aria-labelledby="complatedToDoModelLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="complatedToDoModelLabel">أتمام ال toDo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            هل فعلاً قُمت بإتمام هذه ال toDo ؟
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">تراجع</button>
+            <button id="complatedToDo" type="button" class="btn btn-success" data-bs-dismiss="modal">نعم . قمتُ باتمامها</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="removeToDoModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="removeToDoModelLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="removeToDoModelLabel">حذف toDo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <strong class="text-danger">تحذير :</strong> هل ترغب فعلاً بحذف هذه ال toDo ؟
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ترجع</button>
+            <button id="removeToDo" type="button" class="btn btn-danger" data-bs-dismiss="modal">نعم . قُم بالحذف</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- jquery library-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    <!-- bootstrap library-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
