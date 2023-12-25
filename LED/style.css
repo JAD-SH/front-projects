@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    background-color: #331f4a;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #331f4a;
+ }
+.led{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -100px;
+}
+.up-body-led{
+    top: 70px;
+    position: relative;
+    border-radius: 54%;
+    width: 200px;
+    height: 300px;
+    background-color: #fffffffa;
+}
+.up-body-led .cercl{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;            
+}
+.down-body-led{
+    width: 100px;
+    height: 75px;
+    background-color: #fffffffa;
+    position: absolute;
+    top: 329px;
+    z-index: 2;
+}
+.down-body-led .before{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 43px;
+    background-color: inherit;
+    left: -10px;
+    top: -4px;
+     transform: rotateZ(-24deg);
+}
+.down-body-led .after{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 43px;
+    background-color: inherit;
+    left: 92px;
+    top: -4px;
+     transform: rotateZ(24deg);
+}
+.nical{
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    background-color: #979797;
+    top: 404px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+ }
+.sound{
+    left: -4px;
+    position: relative;
+    width: 108px;
+    height: 6px;
+    background-color: #757575;
+    margin-top: 5px;
+    border-radius: 30px;
+}
+.last-point{
+    width: 40px;
+    height: 6px;
+    background-color:#000000;
+    margin-top: 5px;
+    left: 30px;
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.tenxsten{
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top: 210px;
+    z-index: 1;
+}
+.tenxsten::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 200px;
+    background-color: #75757541;
+}
+.tenxsten::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 200px;
+    background-color: #75757541;
+    left: 47px;
+}
+.tenxsten .con{
+    display: flex;
+}
+.crcl{
+     
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid #75757541;
+}
+.rng{
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    bottom: 0px;
+    z-index: 11111;
+}
+input{
+    width: 300px;
+    margin: 50px calc(50% - 150px);    
+}
+.info{
+    display: block;
+    direction: rtl;
+    color: white;
+    margin: 20px 20px 0 20px;
+    padding: 15px;
+     border-right: 5px solid #f910a0;
+     position: absolute;
+     top: 0;
+     right: 0;
+     z-index: 1111;
+}
