@@ -138,6 +138,7 @@ function OnClickComplateBtns(){
 
 $('#removeToDo').on("click", () => {
   let toDoId = $('#removeToDo').attr('data-id');
+  if(toDoId != 'remove-all'){
   localStorage.removeItem(toDoId);
   $(`#${toDoId}`).fadeOut(500);
   setTimeout(() => {
@@ -147,6 +148,14 @@ $('#removeToDo').on("click", () => {
   OnClickRemoveBtns();
   OnClickComplateBtns();
   if(Object.keys({...localStorage}).length <= 0){
+    $('#noToDoAlret').fadeIn(500);
+  }
+  }else{
+    localStorage.clear();
+    $('.toDo-item').remove();
+    toDosCounter();
+    OnClickRemoveBtns();
+    OnClickComplateBtns();
     $('#noToDoAlret').fadeIn(500);
   }
 });

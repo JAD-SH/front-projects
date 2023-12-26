@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
   <head>
      <meta charset="utf-8">
-     <title>larazoon - ToDoList</title>
+     <title>Larazoon - ToDo List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- bootstrap styles -->
@@ -18,13 +18,13 @@
     <div class="my-3 p-3 bg-body rounded shadow-sm">
 
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      toDo-List مقدمة من موقع <a href="https://www.larazoon.com" class="fw-bolder">larazoon.com</a>
+      toDo-List أحترافية مقدمة من موقع <a href="https://www.larazoon.com" class="fw-bolder">larazoon.com</a>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
     <div class="bg-light shadow-sm rounded-4 p-4 my-3 mx-2 border border-info border-secondary">
       <div class="input-group mb-3">
-        <textarea class="form-control border-bottom border-info bg-light" placeholder="أدخل المهام" id="inputToDo" aria-label="Recipient's username" aria-describedby="addToDoBtn"></textarea>
+        <textarea class="form-control border-bottom border-info bg-white" placeholder="أدخل المهام" id="inputToDo" aria-label="Recipient's username" aria-describedby="addToDoBtn"></textarea>
         
       <button type="button" class="btn btn-primary" id="addToDoBtn">إضافة</button>
       </div>
@@ -57,7 +57,8 @@
     </div>
     <div class="btn btn-light shadow-sm">
       أتممت <span id="allComplatedToDosCount" class="badge text-bg-secondary"></span>
-    </div>
+    </div><br>
+    <button type="button" class="btn btn-danger m-3 remove-btn" data-bs-toggle="modal" data-bs-target="#removeToDoModel" data-id="remove-all">حذف الجميع</button>
   </div>
     
 

@@ -1,0 +1,150 @@
+div{
+    padding: 50px;
+    margin: 20px;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    
+}
+
+body{
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+*[data-sos]{
+    opacity: 0;
+    transition: all .3s;
+}
+.sos-top{
+    animation: slideTop .6s ease-in-out both;
+    background-color: rgb(255, 245, 51);
+    color: #7b7b7b;
+}
+.sos-bottom{
+    animation: slideBottom .6s ease-in-out both;
+    background-color: rgb(51, 170, 255);
+}
+.sos-left{
+    animation: slideLeft .6s ease-in-out both;
+    background-color: rgb(255, 82, 51);
+}
+.sos-right{
+    animation: slideRight .6s ease-in-out both;
+    background-color: rgb(173, 51, 255);
+}
+.sos-zoom-in{
+    animation: slideZoomIn .6s ease-in-out both;
+    background-color: rgb(51, 255, 61);
+}
+.sos-zoom-out{
+    animation: slideZoomOut .6s ease-in-out both;
+    background-color: rgb(22, 30, 255);
+}
+.sos-blur{
+    animation: slideBlur .6s ease-in-out both;
+    background-color: rgb(255, 51, 194);
+}
+.sos-rotateZ{
+    animation: slideRotateZ .6s ease-in-out both;
+    background-color: rgb(51, 255, 170);
+}
+@keyframes slideRotateZ {
+    from {
+    transform: rotateZ(25deg);
+    opacity: 0;
+    }
+    to {
+    transform: rotateZ(0);
+    opacity: 1;
+
+    }
+}
+@keyframes slideTop {
+    from {
+    transform: translateY(-100px);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+
+    }
+}
+@keyframes slideBottom {
+    from {
+    transform: translateY(100px);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+
+    }
+}
+@keyframes slideLeft {
+    from {
+    transform: translateX(300px);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0);
+    opacity: 1;
+
+    }
+}
+@keyframes slideRight {
+    from {
+    transform: translateX(-300px);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0);
+    opacity: 1;
+
+    }
+}
+
+@keyframes slideZoomIn {
+    from {
+    transform: scale(.5);
+    opacity: 0;
+    filter: blur(0.5px);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0px);
+
+    }
+}
+@keyframes slideZoomOut {
+    from {
+    transform: scale(1.5);
+    opacity: 0;
+    filter: blur(0.5px);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0px);
+
+    }
+}
+@keyframes slideBlur {
+    from {
+        opacity: 0;
+        filter: blur(1.5px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+.info{
+    display: block;
+    direction: rtl;
+    margin: 20px;
+    padding: 15px;
+     border-right: 5px solid #f910a0;
+}
